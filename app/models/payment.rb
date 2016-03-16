@@ -3,7 +3,8 @@ class Payment < ActiveRecord::Base
     belongs_to :user
     
     def self.month_options
-       Date::MONTHNAMES.compact.each_with_index.map { |name, i| ["#{i + 1} - #{name}"]} 
+       #Date::MONTHNAMES.compact.each_with_index.map { |name, i| ["#{i + 1} - #{name}", i + 1]} 
+       [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     end
     
     def self.year_options
